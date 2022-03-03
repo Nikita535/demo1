@@ -1,5 +1,7 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.Service.ManufactureService;
+import com.example.demo.Service.PhoneService;
 import com.example.demo.repositoies.ManufactureRep;
 import com.example.demo.repositoies.PhoneRep;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class RemovingController {
 
     @Autowired
-    private ManufactureRep manufactureRep;
+    private ManufactureService manufactureService;
     @Autowired
-    private PhoneRep phoneRep;
+    private PhoneService phoneService;
 
 
     @GetMapping("/manufacture/{name}")
     public String removeManufacture(@PathVariable String name){
-        if(manufactureRep.findManufactureByName(name) != null){
-            manufactureRep.deleteManufactureByName(name);
+        if(manufactureService.removeManufacture(name)){
             return "This manufacture was deleted";
         }else{
             return "This manufacture not found";
@@ -30,8 +31,7 @@ public class RemovingController {
 
     @GetMapping("/phone/{name}")
     public String removePhone(@PathVariable String name){
-        if(phoneRep.findPhoneByName(name) != null){
-            phoneRep.deletePhoneByName(name);
+        if(phoneService.removePhone(name)){
             return "This phone was deleted";
         }else{
             return "This phone not found";

@@ -16,7 +16,7 @@ public class Manufacture {
     private String name;
     private String address;
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "manufacture",fetch=FetchType.LAZY)
-    private Set<Phone> phone=new HashSet<Phone>();
+    private final Set<Phone> phone=new HashSet<Phone>();
 
 
     //создать table

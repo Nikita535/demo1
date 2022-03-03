@@ -29,5 +29,35 @@ public class Phone {
         this.creationYear = creationYear;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCreationYear() {
+        return creationYear;
+    }
+
+    public Manufacture getManufacture() {
+        return manufacture;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCreationYear(String creationYear) {
+        this.creationYear = creationYear;
+    }
+
+    public void setManufacture(Manufacture manufacture) {
+        this.manufacture = manufacture;
+    }
 }

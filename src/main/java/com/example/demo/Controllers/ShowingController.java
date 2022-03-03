@@ -28,7 +28,6 @@ public class ShowingController {
 
     @GetMapping("/manufacture/{name}")
     public String showManufacturePhone(@PathVariable String name){
-
         return manufactureRep.findManufactureByName(name).toString();
     }
 
