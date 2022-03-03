@@ -6,14 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
-import java.util.List;
+import java.util.*;
 
 @Repository
 public interface ManufactureRep extends JpaRepository<Manufacture,Long>{
 
     Manufacture findManufactureByName(String name);
     List<Manufacture> findAllBy();
-
     @Transactional
     void deleteManufactureByName(String name);
 

@@ -12,7 +12,7 @@ import java.util.List;
 public interface PhoneRep extends JpaRepository<Phone,Long> {
 
     Phone findPhoneByName(String name);
-    List<Phone> findAllBy();
+    List<Phone> findAllById(Long id);
     @Transactional
     void deletePhoneByName(String name);
 }

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+
 @Entity
 @Table
 public class Manufacture {
@@ -27,7 +27,17 @@ public class Manufacture {
         this.address = address;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public Set<Phone> getPhone() {
+        return phone;
+    }
 
     @Override
     public String toString() {
