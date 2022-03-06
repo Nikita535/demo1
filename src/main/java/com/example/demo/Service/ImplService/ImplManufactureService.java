@@ -3,11 +3,15 @@ package com.example.demo.Service.ImplService;
 import com.example.demo.Service.ManufactureService;
 import com.example.demo.entity.Manufacture;
 import com.example.demo.repositoies.ManufactureRep;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class ImplManufactureService implements ManufactureService {
 
     @Autowired
@@ -19,17 +23,24 @@ public class ImplManufactureService implements ManufactureService {
         if (manufacture==null){
             manufacture=new Manufacture(name,address);
             manufactureRep.save(manufacture);
+            log.info("manufacture created");
             return manufacture;
+        }else {
+            log.info("manufacture already exist");
+            return null;
         }
-        return null;
     }
 
     @Override
     public boolean removeManufacture(String name) {
         if(manufactureRep.findManufactureByName(name)!=null) {
             manufactureRep.deleteManufactureByName(name);
+            log.info("manufacture deleted");
             return true;
-        } return false;
+        }else{
+            log.info("manufacture doesnt exist");
+            return false;
+        }
     }
 
 }
