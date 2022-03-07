@@ -1156,3 +1156,179 @@ org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.S
 6665 [RMI TCP Connection(2)-172.23.208.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
 6665 [RMI TCP Connection(2)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
 6667 [RMI TCP Connection(2)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+896  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 7332 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+900  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+901  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+2119 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2186 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2796 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2806 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2807 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2807 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+2942 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2942 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1998 ms
+3270 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3341 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+3538 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3687 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3882 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3900 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4686 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+4695 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+4701 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+4706 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+4710 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+4714 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+4724 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+4732 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+4739 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4749 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+5196 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5752 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5782 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5811 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+5829 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 5.365 seconds (JVM running for 6.771)
+6205 [RMI TCP Connection(6)-172.23.208.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+6206 [RMI TCP Connection(6)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+6207 [RMI TCP Connection(6)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+12886 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+12929 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
+12977 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.manufacture (address, name, id) values (?, ?, ?)
+12989 [http-nio-8080-exec-1] INFO  c.e.d.S.I.ImplManufactureService – manufacture created
+34865 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+34867 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+34874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+823  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+823  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 696 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+827  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+2386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2473 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+3238 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+3250 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+3250 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+3250 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+3412 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+3413 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2524 ms
+3771 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3851 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+4086 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+4235 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+4544 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+4566 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+5587 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+5612 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+5634 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+5650 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+5660 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+5679 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+5701 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+5710 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+5722 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+5733 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+6347 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+7052 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+7090 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+7134 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+7154 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 6.804 seconds (JVM running for 9.417)
+17243 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+17244 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+17246 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+17450 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+17504 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
+17563 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.manufacture (address, name, id) values (?, ?, ?)
+17576 [http-nio-8080-exec-1] INFO  c.e.d.S.I.ImplManufactureService – manufacture created
+58612 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select phone0_.id as id1_1_, phone0_.creation_year as creation2_1_, phone0_.manufactor_id as manufact4_1_, phone0_.name as name3_1_ from jpa.phone phone0_ where phone0_.name=?
+58616 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+58630 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
+58632 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – insert into jpa.phone (creation_year, manufactor_id, name, id) values (?, ?, ?, ?)
+58636 [http-nio-8080-exec-4] INFO  c.e.d.S.I.ImplPhoneService – phone created
+83352 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+83355 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+83359 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+83364 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – select phone0_.manufactor_id as manufact4_1_0_, phone0_.id as id1_1_0_, phone0_.id as id1_1_1_, phone0_.creation_year as creation2_1_1_, phone0_.manufactor_id as manufact4_1_1_, phone0_.name as name3_1_1_ from jpa.phone phone0_ where phone0_.manufactor_id=?
+83385 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – delete from jpa.phone where id=?
+83389 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL – delete from jpa.manufacture where id=?
+83393 [http-nio-8080-exec-9] INFO  c.e.d.S.I.ImplManufactureService – manufacture deleted
+104152 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+104157 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+104195 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+285  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.Pr16ApplicationTests], using SpringBootContextLoader
+294  [Test worker] INFO  o.s.t.c.s.AbstractContextLoader � Could not detect default resource locations for test class [com.example.demo.Pr16ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+295  [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils � Could not detect default configuration classes for test class [com.example.demo.Pr16ApplicationTests]: Pr16ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+423  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Found @SpringBootConfiguration com.example.demo.Pr16Application for test class com.example.demo.Pr16ApplicationTests
+564  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+593  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ed190be, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@402f80f5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5bbc9f97, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@133e019b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@41382722, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7dac3fd8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@425357dd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2102a4d5, org.springframework.test.context.event.EventPublishingTestExecutionListener@210386e0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3d4d3fe7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65f87a2c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@51684e4a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6ce1f601, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@38875e7d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1e886a5b]
+983  [Test worker] INFO  c.example.demo.Pr16ApplicationTests � Starting Pr16ApplicationTests using Java 16.0.2 on New-PC with PID 4548 (started by user in C:\Users\user\Desktop\demo)
+984  [Test worker] INFO  c.example.demo.Pr16ApplicationTests � No active profile set, falling back to 1 default profile: "default"
+996  [background-preinit] INFO  o.h.validator.internal.util.Version � HV000001: Hibernate Validator 6.2.2.Final
+2393 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2490 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+3624 [Test worker] INFO  o.h.jpa.internal.util.LogHelper � HHH000204: Processing PersistenceUnitInfo [name: default]
+3712 [Test worker] INFO  org.hibernate.Version � HHH000412: Hibernate ORM core version 5.6.5.Final
+3956 [Test worker] INFO  o.h.annotations.common.Version � HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+4125 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Starting...
+4406 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Start completed.
+4433 [Test worker] INFO  org.hibernate.dialect.Dialect � HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+5648 [Test worker] DEBUG org.hibernate.SQL � alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+5676 [Test worker] DEBUG org.hibernate.SQL � drop table if exists jpa.manufacture cascade
+5696 [Test worker] DEBUG org.hibernate.SQL � drop table if exists jpa.phone cascade
+5710 [Test worker] DEBUG org.hibernate.SQL � drop sequence if exists jpa.hibernate_sequence
+5720 [Test worker] DEBUG org.hibernate.SQL � create sequence jpa.hibernate_sequence start 1 increment 1
+5739 [Test worker] DEBUG org.hibernate.SQL � create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+5759 [Test worker] DEBUG org.hibernate.SQL � create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+5770 [Test worker] DEBUG org.hibernate.SQL � alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+5783 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator � HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+5795 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Initialized JPA EntityManagerFactory for persistence unit 'default'
+6869 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration � spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+8648 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver � Exposing 1 endpoint(s) beneath base path '/actuator'
+8889 [Test worker] INFO  c.example.demo.Pr16ApplicationTests � Started Pr16ApplicationTests in 8.243 seconds (JVM running for 10.216)
+9317 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Closing JPA EntityManagerFactory for persistence unit 'default'
+9321 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown initiated...
+9344 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown completed.
+578  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+577  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 12936 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+580  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+1423 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
+2192 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2201 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2201 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2201 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+2321 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2322 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1703 ms
+2590 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2646 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+2778 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2888 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3059 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3073 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+3993 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+4008 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+4011 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+4015 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+4018 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+4022 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+4030 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+4041 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+4045 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4054 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4527 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5025 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+5052 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+5078 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+5093 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 4.838 seconds (JVM running for 5.633)
+5432 [RMI TCP Connection(6)-172.23.208.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+5432 [RMI TCP Connection(6)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+5433 [RMI TCP Connection(6)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+14211 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+14254 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
+14290 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.manufacture (address, name, id) values (?, ?, ?)
+14299 [http-nio-8080-exec-1] INFO  c.e.d.S.I.ImplManufactureService – manufacture created
+14305 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect.Aspect – addManufacture executed in 188ms
+101963 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+101971 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+101974 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
+101977 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select phone0_.manufactor_id as manufact4_1_0_, phone0_.id as id1_1_0_, phone0_.id as id1_1_1_, phone0_.creation_year as creation2_1_1_, phone0_.manufactor_id as manufact4_1_1_, phone0_.name as name3_1_1_ from jpa.phone phone0_ where phone0_.manufactor_id=?
+101985 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – delete from jpa.manufacture where id=?
+101991 [http-nio-8080-exec-5] INFO  c.e.d.S.I.ImplManufactureService – manufacture deleted
+101991 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect.Aspect – removeManufacture executed in 29ms

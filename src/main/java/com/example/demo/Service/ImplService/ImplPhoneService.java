@@ -1,5 +1,6 @@
 package com.example.demo.Service.ImplService;
 
+import com.example.demo.Aspect.LogExecutionTime;
 import com.example.demo.Service.EmailService;
 import com.example.demo.Service.PhoneService;
 import com.example.demo.entity.Phone;
@@ -22,6 +23,7 @@ public class ImplPhoneService implements PhoneService {
     @Autowired
     private EmailService emailService;
 
+    @LogExecutionTime
     @Override
     public Phone addPhone(String name, String manufacture, String creationYear) {
         Phone phone = phoneRep.findPhoneByName(name);
@@ -38,6 +40,7 @@ public class ImplPhoneService implements PhoneService {
         }
     }
 
+    @LogExecutionTime
     @Override
     public boolean removePhone(String name) {
         if(phoneRep.findPhoneByName(name) != null){

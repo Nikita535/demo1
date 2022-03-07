@@ -1,5 +1,6 @@
 package com.example.demo.Service.ImplService;
 
+import com.example.demo.Aspect.LogExecutionTime;
 import com.example.demo.Service.EmailService;
 import com.example.demo.Service.ManufactureService;
 import com.example.demo.entity.Manufacture;
@@ -20,6 +21,7 @@ public class ImplManufactureService implements ManufactureService {
     @Autowired
     private EmailService emailService;
 
+    @LogExecutionTime
     @Override
     public Manufacture addManufacture(String name, String address) {
         Manufacture manufacture=manufactureRep.findManufactureByName(name);
@@ -36,6 +38,7 @@ public class ImplManufactureService implements ManufactureService {
     }
 
     @Override
+    @LogExecutionTime
     public boolean removeManufacture(String name) {
         if(manufactureRep.findManufactureByName(name)!=null) {
             Manufacture manufacture=manufactureRep.findManufactureByName(name);
