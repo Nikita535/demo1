@@ -1118,3 +1118,41 @@ org.springframework.mail.MailSendException: Failed messages: com.sun.mail.smtp.S
 32699 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL – select phone0_.manufactor_id as manufact4_1_0_, phone0_.id as id1_1_0_, phone0_.id as id1_1_1_, phone0_.creation_year as creation2_1_1_, phone0_.manufactor_id as manufact4_1_1_, phone0_.name as name3_1_1_ from jpa.phone phone0_ where phone0_.manufactor_id=?
 32707 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL – delete from jpa.manufacture where id=?
 32712 [http-nio-8080-exec-3] INFO  c.e.d.S.I.ImplManufactureService – manufacture deleted
+154570 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+154581 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+154754 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+849  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+850  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 15404 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+852  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+2318 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2486 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 151 ms. Found 2 JPA repository interfaces.
+3151 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+3162 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+3163 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+3163 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+3294 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+3294 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2375 ms
+3563 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3618 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+3775 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3929 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+4128 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+4143 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4932 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+4940 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+4946 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+4949 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+4954 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+4964 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+4975 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+4982 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+4988 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4999 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+5733 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+6381 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+6418 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+6446 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+6461 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 6.013 seconds (JVM running for 7.282)
+6665 [RMI TCP Connection(2)-172.23.208.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+6665 [RMI TCP Connection(2)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+6667 [RMI TCP Connection(2)-172.23.208.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
