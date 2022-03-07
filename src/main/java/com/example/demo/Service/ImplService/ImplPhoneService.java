@@ -1,5 +1,6 @@
 package com.example.demo.Service.ImplService;
 
+import com.example.demo.Service.EmailService;
 import com.example.demo.Service.PhoneService;
 import com.example.demo.entity.Phone;
 import com.example.demo.repositoies.ManufactureRep;
@@ -18,6 +19,8 @@ public class ImplPhoneService implements PhoneService {
     private PhoneRep phoneRep;
     @Autowired
     private ManufactureRep manufactureRep;
+    @Autowired
+    private EmailService emailService;
 
     @Override
     public Phone addPhone(String name, String manufacture, String creationYear) {
@@ -27,6 +30,7 @@ public class ImplPhoneService implements PhoneService {
             phone.setManufacture(manufactureRep.findManufactureByName(manufacture));
             phoneRep.save(phone);
             log.info("phone created");
+            emailService.sendSimpleMessage("phone - "+phone.getName()+" added");
             return phone;
         } else {
             log.info("phone already exist");
@@ -37,8 +41,10 @@ public class ImplPhoneService implements PhoneService {
     @Override
     public boolean removePhone(String name) {
         if(phoneRep.findPhoneByName(name) != null){
+            Phone phone=phoneRep.findPhoneByName(name);
             phoneRep.deletePhoneByName(name);
             log.info("phone deleted");
+            emailService.sendSimpleMessage("phone - "+phone.getName()+" deleted");
             return true;
         } else {
             log.info("phone doesnt exist");

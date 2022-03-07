@@ -1,5 +1,6 @@
 package com.example.demo.Service.ImplService;
 
+import com.example.demo.Service.EmailService;
 import com.example.demo.Service.ManufactureService;
 import com.example.demo.entity.Manufacture;
 import com.example.demo.repositoies.ManufactureRep;
@@ -16,6 +17,8 @@ public class ImplManufactureService implements ManufactureService {
 
     @Autowired
     private ManufactureRep manufactureRep;
+    @Autowired
+    private EmailService emailService;
 
     @Override
     public Manufacture addManufacture(String name, String address) {
@@ -24,6 +27,7 @@ public class ImplManufactureService implements ManufactureService {
             manufacture=new Manufacture(name,address);
             manufactureRep.save(manufacture);
             log.info("manufacture created");
+            emailService.sendSimpleMessage("- "+manufacture.getName()+" created");
             return manufacture;
         }else {
             log.info("manufacture already exist");
@@ -34,8 +38,10 @@ public class ImplManufactureService implements ManufactureService {
     @Override
     public boolean removeManufacture(String name) {
         if(manufactureRep.findManufactureByName(name)!=null) {
+            Manufacture manufacture=manufactureRep.findManufactureByName(name);
             manufactureRep.deleteManufactureByName(name);
             log.info("manufacture deleted");
+            emailService.sendSimpleMessage("manufacture - "+manufacture.getName()+" deleted");
             return true;
         }else{
             log.info("manufacture doesnt exist");

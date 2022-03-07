@@ -30,6 +30,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.slf4j:slf4j-api:1.7.36'
 	testImplementation 'ch.qos.logback:logback-classic:1.2.10'
+	implementation 'org.springframework.boot:spring-boot-starter-mail:2.6.4'
 }
 
 tasks.named('test') {
