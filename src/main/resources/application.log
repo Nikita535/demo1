@@ -217,3 +217,45 @@
 88552 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
 88561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
 88567 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+148553 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+148555 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+148556 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+208550 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+208551 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+208553 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+268557 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+268560 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+268561 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+328551 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+328553 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+328554 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+388556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+388559 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+388560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+448561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+448563 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+448565 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+508558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+508561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+508562 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+568574 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+568578 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+568581 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+628555 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+628557 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+628559 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+688556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+688558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+688560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+748564 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+748566 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+748568 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+808556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+808558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+808560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+868562 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+868564 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+868567 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+878361 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+878363 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+878373 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.

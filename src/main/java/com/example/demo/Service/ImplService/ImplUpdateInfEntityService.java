@@ -23,6 +23,8 @@ public class ImplUpdateInfEntityService implements UpdateInfEntityService {
     @Autowired
     private PhoneRep phoneRep;
 
+//    @Scheduled(cron ="*/30 * * * *")
+//    for test
     @Scheduled(cron="0 * * * * *")
     @Transactional
     @Override
