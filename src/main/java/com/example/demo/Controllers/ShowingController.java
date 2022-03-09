@@ -18,8 +18,7 @@ public class ShowingController {
 
     @Autowired
     private ManufactureRep manufactureRep;
-    @Autowired
-    private PhoneRep phoneRep;
+
 
     @GetMapping("/manufacture")
     public String showManufacture(){
