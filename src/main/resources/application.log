@@ -1,261 +1,303 @@
-722  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-722  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 1656 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
-735  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-2026 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2101 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
-2934 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-2944 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-2945 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-2945 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-3068 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-3068 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2284 ms
-3415 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-3482 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-3681 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-3815 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-4213 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-4233 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-4994 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
-5073 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
-5099 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
-5109 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
-5124 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
-5169 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
-5221 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
-5229 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
-5273 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-5287 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-5852 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-6534 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-6563 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-6588 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-6607 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 6.319 seconds (JVM running for 7.407)
-6929 [RMI TCP Connection(2)-192.168.56.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-6929 [RMI TCP Connection(2)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-6930 [RMI TCP Connection(2)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-22449 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-22459 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-82407 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-82409 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-142400 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-142401 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-172174 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
-172206 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
-172246 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.manufacture (address, name, id) values (?, ?, ?)
-172262 [http-nio-8080-exec-1] INFO  c.e.d.S.I.ImplManufactureService – manufacture created
-172268 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect.Aspect – addManufacture executed in 215ms
-202409 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-202410 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-223634 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-223636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-223655 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-743  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-745  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 16232 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
-747  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1891 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1965 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
-2766 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-2777 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-2777 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-2777 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-2918 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-2919 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2121 ms
-3217 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-3290 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-3490 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-3615 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-3862 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-3885 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-4694 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
-4715 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
-4723 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
-4727 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
-4732 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
-4745 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
-4766 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
-4780 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
-4789 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-4799 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-5372 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-6023 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-6056 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-6083 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-6103 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 5.72 seconds (JVM running for 7.046)
-6616 [RMI TCP Connection(3)-192.168.56.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-6617 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-6618 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-25249 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-25260 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-25261 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-61505 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
-61533 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
-61579 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.manufacture (address, name, id) values (?, ?, ?)
-61591 [http-nio-8080-exec-1] INFO  c.e.d.S.I.ImplManufactureService – manufacture created
-61595 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect.Aspect – addManufacture executed in 230ms
-68023 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select phone0_.id as id1_1_, phone0_.creation_year as creation2_1_, phone0_.manufactor_id as manufact4_1_, phone0_.name as name3_1_ from jpa.phone phone0_ where phone0_.name=?
-68026 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select manufactur0_.id as id1_0_, manufactur0_.address as address2_0_, manufactur0_.name as name3_0_ from jpa.manufacture manufactur0_ where manufactur0_.name=?
-68039 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
-68041 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – insert into jpa.phone (creation_year, manufactor_id, name, id) values (?, ?, ?, ?)
-68044 [http-nio-8080-exec-4] INFO  c.e.d.S.I.ImplPhoneService – phone created
-68044 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect.Aspect – addPhone executed in 32ms
-85213 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-85215 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-85216 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-145205 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-145207 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-145209 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-205206 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-205208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-205209 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-265202 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-265204 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-265206 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-325211 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-325213 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-325214 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-385197 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-385199 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-385200 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-445200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-445203 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-445204 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-505208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-505210 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-505211 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-565212 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-565213 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-565214 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-625209 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-625211 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-625212 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-685200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-685202 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-685204 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-745213 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-745213 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-745216 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-805198 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-805200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-805202 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-865208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-865210 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-865211 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-925198 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-925200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-925201 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-985200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-985202 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-985204 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1045208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1045210 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1045211 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1105198 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1105200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1105201 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1165198 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1165200 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1165202 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1225204 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1225206 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1225207 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1285206 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1285208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1285209 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1345207 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1345209 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1345210 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1405197 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1405199 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1405200 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1465210 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1465212 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1465213 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1525203 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-1525205 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-1525206 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-1561612 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-1561631 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-1561761 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-841  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-850  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 9788 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
-851  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-2225 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2316 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
-3174 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-3186 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-3187 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-3187 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-3347 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-3347 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2437 ms
-3705 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-3782 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-4001 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-4158 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-4423 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-4443 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-5474 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
-5505 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
-5525 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
-5532 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
-5538 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
-5552 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
-5581 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
-5588 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
-5606 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-5617 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-6393 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-7138 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-7185 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-7234 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-7255 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 6.855 seconds (JVM running for 8.541)
-28618 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-28631 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-28633 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-67370 [RMI TCP Connection(6)-192.168.56.1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-67372 [RMI TCP Connection(6)-192.168.56.1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-67373 [RMI TCP Connection(6)-192.168.56.1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-88552 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-88561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-88567 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-148553 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-148555 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-148556 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-208550 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-208551 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-208553 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-268557 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-268560 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-268561 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-328551 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-328553 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-328554 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-388556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-388559 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-388560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-448561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-448563 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-448565 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-508558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-508561 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-508562 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-568574 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-568578 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-568581 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-628555 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-628557 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-628559 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-688556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-688558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-688560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-748564 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-748566 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-748568 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-808556 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-808558 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-808560 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-868562 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
-868564 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
-868567 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
-878361 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-878363 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-878373 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+768  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+772  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 17084 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+777  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+2196 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2267 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+3016 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+3025 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+3026 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+3026 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+3156 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+3156 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 2324 ms
+3459 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3524 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+3728 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3844 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+4183 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+4200 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4918 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+5014 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+5038 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+5049 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+5064 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+5116 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+5180 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+5188 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+5237 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+5246 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+5284 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+6368 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: 0ae613ba-aa8e-41b9-a324-46f345aa910e
+
+6477 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will not secure any request
+6503 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+6548 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+6601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+6621 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 6.327 seconds (JVM running for 7.92)
+35054 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+35055 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+35057 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+62197 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+62208 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+62211 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+71590 [http-nio-8080-exec-7] ERROR org.thymeleaf.TemplateEngine – [THYMELEAF][http-nio-8080-exec-7] Exception processing template "registration": Error resolving template [registration], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [registration], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+71596 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] – Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [registration], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [registration], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+122139 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+122144 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+122145 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+142639 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+142641 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+142647 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+626  [main] INFO  com.example.demo.Pr16Application – Starting Pr16Application using Java 16.0.2 on New-PC with PID 16580 (C:\Users\user\Desktop\demo\build\classes\java\main started by user in C:\Users\user\Desktop\demo)
+626  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+629  [main] INFO  com.example.demo.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+1693 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1749 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2391 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2401 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2402 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2402 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+2537 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2537 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1860 ms
+2917 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+2993 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+3242 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3357 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3561 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3579 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4381 [main] DEBUG org.hibernate.SQL – alter table jpa.phone drop constraint FKd0ph32susql94im07js594j84
+4400 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.manufacture cascade
+4409 [main] DEBUG org.hibernate.SQL – drop table if exists jpa.phone cascade
+4414 [main] DEBUG org.hibernate.SQL – drop sequence if exists jpa.hibernate_sequence
+4420 [main] DEBUG org.hibernate.SQL – create sequence jpa.hibernate_sequence start 1 increment 1
+4440 [main] DEBUG org.hibernate.SQL – create table jpa.manufacture (id int8 not null, address varchar(255), name varchar(255), primary key (id))
+4457 [main] DEBUG org.hibernate.SQL – create table jpa.phone (id int8 not null, creation_year varchar(255), name varchar(255), manufactor_id int8, primary key (id))
+4469 [main] DEBUG org.hibernate.SQL – alter table jpa.phone add constraint FKd0ph32susql94im07js594j84 foreign key (manufactor_id) references jpa.manufacture
+4484 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4493 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4535 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5952 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration – 
+
+Using generated security password: b55ff831-2662-4e00-b752-54376a70ab9c
+
+6055 [main] INFO  o.s.s.w.DefaultSecurityFilterChain – Will not secure any request
+6078 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+6117 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+6145 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+6163 [main] INFO  com.example.demo.Pr16Application – Started Pr16Application in 5.888 seconds (JVM running for 6.768)
+6719 [RMI TCP Connection(7)-192.168.32.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+6720 [RMI TCP Connection(7)-192.168.32.1] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+6722 [RMI TCP Connection(7)-192.168.32.1] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
+32810 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+32821 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+32823 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+92770 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+92772 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+92773 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+152772 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+152774 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+152775 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+212774 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+212776 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+212777 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+272767 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.manufacture TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\manufacture.csv'delimiter ',' csv header encoding 'UTF-8'
+272769 [scheduling-1] DEBUG org.hibernate.SQL – COPY postgres.jpa.phone TO 'C:\Users\user\Desktop\demo\src\main\resources\EntityInf\phone.csv'delimiter ',' csv header encoding 'UTF-8'
+272770 [scheduling-1] INFO  c.e.d.S.I.ImplUpdateInfEntityService – Entities saved
+276121 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+276123 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+276129 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
