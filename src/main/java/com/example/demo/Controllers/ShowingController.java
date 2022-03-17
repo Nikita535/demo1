@@ -1,5 +1,6 @@
 package com.example.demo.Controllers;
 
+import com.example.demo.Service.ManufactureService;
 import com.example.demo.entity.Manufacture;
 import com.example.demo.repositoies.ManufactureRep;
 import com.example.demo.repositoies.PhoneRep;
@@ -18,11 +19,13 @@ public class ShowingController {
 
     @Autowired
     private ManufactureRep manufactureRep;
+    @Autowired
+    ManufactureService manufactureService;
 
 
     @GetMapping("/manufacture")
     public String showManufacture(){
-        return manufactureRep.findAllBy().toString();
+        return manufactureService.showAllManufacture().toString();
     }
 
     @GetMapping("/manufacture/{name}")

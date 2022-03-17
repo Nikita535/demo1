@@ -21,6 +21,9 @@ public class ImplManufactureService implements ManufactureService {
     @Autowired
     private EmailService emailService;
 
+
+
+
     @LogExecutionTime
     @Override
     public Manufacture addManufacture(String name, String address) {
@@ -36,6 +39,14 @@ public class ImplManufactureService implements ManufactureService {
             return null;
         }
     }
+
+    //для 24 добавил, поэтому тут без приколов и проверок. Просто, чтобы было
+
+    public  List<Manufacture> showAllManufacture() {
+            return manufactureRep.findAllBy();
+    }
+
+
 
     @Override
     @LogExecutionTime
